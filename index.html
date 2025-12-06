@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Real-Time Interactive Quiz</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header class="app-header">
+    <h1>Live Quiz Platform</h1>
+  </header>
+  <main>
+    <div class="container">
+      <div class="login-register-wrapper">
+        <h2 id="form-title">Login</h2>
+        <div class="nav-buttons">
+          <button id="loginBtn" class="active">Login</button>
+          <button id="registerBtn">Register</button>
+        </div>
+        <form id="loginform" class="form-group">
+          <input type="text" placeholder="Username" required/>
+          <input type="password" placeholder="Password" required/>
+          <button type="submit">Login</button>
+        </form>
+        <form id="registerform" class="form-group hidden">
+          <input type="text" placeholder="Username" required/>
+          <input type="email" placeholder="Email" required/>
+          <input type="password" placeholder="Create Password" required/>
+          <button type="submit">Register</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="quiz-section" class="hidden">
+      <div class="quiz-container">
+        <div class="timer" aria-live="polite">Time Left: <span id="time">30</span>s</div>
+        <div class="question"></div>
+        <div class="options"></div>
+        <div class="question-feedback" id="feedback"></div>
+        <div class="result">
+          <strong>Your score:</strong> <span id="score">0</span>
+        </div>
+        <button class="restart-btn hidden" id="restart-btn">Restart Quiz</button>
+        <button class="next-btn hidden" id="next-btn">Next</button>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 Real-Time Interactive Quiz | Powered By Free API | Vivek </p>
+  </footer>
+  <script src="script.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>
